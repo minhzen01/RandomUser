@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
                 child: TextField(
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.search),
-                    hintText: 'Search',
+                    hintText: titleSearch,
                     border: OutlineInputBorder(
                         borderRadius:
                         BorderRadius.all(Radius.circular(15.0)))
@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                                   child: IconButton(
                                     icon: const Icon(Icons.navigate_next, size: 35,),
                                     onPressed: () {
-                                      Get.to(InformationDetailScreen());
+                                      Get.to(InformationDetailScreen(informationModel: informationModelList[index],));
                                     },
                                   )
                                 )
