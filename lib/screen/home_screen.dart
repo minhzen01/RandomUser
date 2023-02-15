@@ -25,14 +25,34 @@ class HomeScreen extends StatelessWidget {
             Expanded(
               flex: 1,
               child: Container(
-                margin: const EdgeInsets.all(8.0),
+                // margin: const EdgeInsets.all(8.0),
+                // child: TextField(
+                //   decoration: InputDecoration(
+                //     prefixIcon: Icon(Icons.search),
+                //     hintText: titleSearch,
+                //     border: OutlineInputBorder(
+                //         borderRadius:
+                //         BorderRadius.all(Radius.circular(15.0)))
+                //   ),
+                // ),
                 child: TextField(
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.search),
-                    hintText: titleSearch,
-                    border: OutlineInputBorder(
-                        borderRadius:
-                        BorderRadius.all(Radius.circular(15.0)))
+                  autofocus: true,
+                  onChanged: (val) {
+                    // context.read<SearchController>().searchUser(val);
+                  },
+                  decoration: const InputDecoration(
+                    icon: Padding(
+                      padding: EdgeInsets.only(left: 10.0),
+                      child: Icon(
+                        Icons.search,
+                        color: Colors.black,
+                      ),
+                    ),
+                    border: InputBorder.none,
+                    hintText: "Search here...",
+                    hintStyle: TextStyle(
+                        color: Colors.black
+                    ),
                   ),
                 ),
               ),
